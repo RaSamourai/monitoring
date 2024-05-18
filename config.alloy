@@ -1,0 +1,24 @@
+logging {
+  level  = "debug"
+  format = "logfmt"
+}
+
+prometheus.remote_write "default" {
+  endpoint {
+    url =  "https://prometheus-prod-24-prod-eu-west-2.grafana.net/api/prom/push"
+    basic_auth {
+      username = 1586741
+      password = "glc_eyJvIjoiMTEyNzg3MyIsIm4iOiJzdGFjay05MzU1MjctaW50ZWdyYXRpb24tYnQ3Mjc0LWZlZG9yYSIsImsiOiI2ODF4dEhsNzNIOGpPSGw0MHR3VUhwNjYiLCJtIjp7InIiOiJwcm9kLWV1LXdlc3QtMiJ9fQ=="
+    }
+  }
+}
+
+prometheus.scrape "bt7274" {
+  targets = [
+    { "__address__" = "BT7274:9100" },
+  ]
+
+  forward_to = [prometheus.remote_write.default.receiver]
+
+  scrape_interval = "10s"
+}

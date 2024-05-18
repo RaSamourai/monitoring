@@ -2,7 +2,7 @@
 This project is meant to be able to monitor computers/servers, the easiest way.
 
 # Requirements :
-Docker engine must be installed.
+Docker engine & compose must be installed.
 
 # Stack :
 - Grafana Alloy :

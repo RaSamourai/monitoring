@@ -22,3 +22,23 @@ prometheus.scrape "bt7274" {
 
   scrape_interval = "10s"
 }
+
+prometheus.scrape "windows" {
+  targets = [
+    { "__address__" = "192.168.1.23:9182" },
+  ]
+
+  forward_to = [prometheus.remote_write.default.receiver]
+
+  scrape_interval = "10s"
+}
+
+prometheus.scrape "gpu" {
+  targets = [
+    { "__address__" = "192.168.1.23:9835" },
+  ]
+
+  forward_to = [prometheus.remote_write.default.receiver]
+
+  scrape_interval = "10s"
+}

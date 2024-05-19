@@ -21,7 +21,7 @@ docker compose up -d --remove-orphans
 ```
 # GPU monitoring :
 
-To monitor Nvidia GPU, use [this exporter](https://github.com/utkuozdemir/nvidia_gpu_exporter).
+To monitor Nvidia GPU, use [this exporter](https://github.com/utkuozdemir/nvidia_gpu_exporter).<br>
 Use [this dashboard](https://grafana.com/grafana/dashboards/14574-nvidia-gpu-metrics/).
 
 ```powershell
@@ -40,10 +40,10 @@ Start-Service nvidia_gpu_exporter
 
 # Windows monitoring :
 
-Use [this dashboard](https://grafana.com/grafana/dashboards/15794-windows-exporter-dashboard/).
+Use [this dashboard](https://grafana.com/grafana/dashboards/15794-windows-exporter-dashboard/).<br>
 
-Use this [Windows exporter](https://github.com/prometheus-community/windows_exporter/releases).
-/!\ DOWNLOAD THE .MSI FILE NOT THE .EXE FILE /!\
+Use this [Windows exporter](https://github.com/prometheus-community/windows_exporter/releases).<br>
+/!\ DOWNLOAD THE .MSI FILE NOT THE .EXE FILE /!\<br>
 
 Then use  this command in a cmd shell ran as administrator :
 ```shell

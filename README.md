@@ -40,11 +40,11 @@ Start-Service nvidia_gpu_exporter
 
 # Windows monitoring :
 
-Use [this dashboard](https://grafana.com/grafana/dashboards/15794-windows-exporter-dashboard/).<br>
-
-Use this [Windows exporter](https://github.com/prometheus-community/windows_exporter/releases).<br>
+To monitor a Windows machine, use this [Windows exporter](https://github.com/prometheus-community/windows_exporter/releases).<br>
 /!\ DOWNLOAD THE .MSI FILE NOT THE .EXE FILE /!\<br>
-
+<br>
+Use [this dashboard](https://grafana.com/grafana/dashboards/15794-windows-exporter-dashboard/).<br>
+<br>
 Then use  this command in a cmd shell ran as administrator :
 ```shell
 msiexec /i windows_exporter-0.16.0-amd64.msi ENABLED_COLLECTORS="ad,adfs,cache,cpu,cpu_info,cs,container,dfsr,dhcp,dns,fsrmquota,iis,logical_disk,logon,memory,msmq,mssql,netframework_clrexceptions,netframework_clrinterop,netframework_clrjit,netframework_clrloading,netframework_clrlocksandthreads,netframework_clrmemory,netframework_clrremoting,netframework_clrsecurity,net,os,process,remote_fx,service,tcp,time,vmware" TEXTFILE_DIR="C:\custom_metrics" LISTEN_PORT="9182"

@@ -41,7 +41,7 @@ Start-Service nvidia_gpu_exporter
 # Windows monitoring :
 
 To monitor a Windows machine, use this [Windows exporter](https://github.com/prometheus-community/windows_exporter/releases).<br>
-/!\ DOWNLOAD THE .MSI FILE NOT THE .EXE FILE /!\<br>
+/!\ DOWNLOAD THE .MSI FILE NOT THE .EXE FILE /!\\<br>
 <br>
 Use [this dashboard](https://grafana.com/grafana/dashboards/15794-windows-exporter-dashboard/).<br>
 <br>
